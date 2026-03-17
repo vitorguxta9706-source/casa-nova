@@ -7,8 +7,8 @@ export default async function handler(req, res) {
       'https://api.yampi.com.br/v2/casanova26/catalog/products?limit=24&include=skus,images',
       {
         headers: {
-          'User-Token': 'MgEQ6fjpcLVq2pQ5CIYcEc5azzzjJhenj6MTmSzd',
-          'User-Secret-Key': 'sk_pdcyIFoHDHviMjmkglOFdBRoyP67JHNR4ic6Y',
+          'User-Token': 'IkIkKull27qxtberoCWz3XURulQGOifwuO3R3GZh',
+          'User-Secret-Key': 'sk_bKMQHQ0GbxjCi5sfGpj5LqhYUJ6Oxv0FDN6jO',
           'Accept': 'application/json'
         }
       }
