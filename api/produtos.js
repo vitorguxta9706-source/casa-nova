@@ -1,7 +1,7 @@
 export const config = { runtime: 'edge' };
 
 export default async function handler(req) {
-  const response = await fetch(
+  const r = await fetch(
     'https://api.yampi.com.br/v2/casanova26/catalog/products?limit=24&include=skus,images',
     {
       method: 'GET',
@@ -12,17 +12,9 @@ export default async function handler(req) {
       }
     }
   );
-
-  const text = await response.text();
-
+  const t = await r.text();
   return new Response(
-    JSON.stringify({ status: response.status, body: text.substring(0, 500) }),
-    {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      }
-    }
+    JSON.stringify({ status: r.status, body: t.substring(0, 500) }),
+    { status: 200, headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' } }
   );
 }
