@@ -26,10 +26,3 @@ export default async function handler(req) {
     }
   );
 }
-```
-
-**4.** Clique em **"Commit changes"**
-
-**5.** Aguarde o deploy e acesse:
-```
-https://casa-nova-iota.vercel.app/api/produtos
